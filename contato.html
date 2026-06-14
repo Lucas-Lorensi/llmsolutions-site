@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contato — LLM Solutions</title>
+  <meta name="description" content="Fale com a LLM Solutions. Agende uma conversa de 15 minutos, sem compromisso, sobre IA para a sua campanha ou instituição.">
+  <meta name="theme-color" content="#0a1628">
+  <link rel="icon" href="https://llmsolutions.com.br/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="index.html" aria-label="LLM Solutions — início">
+        <img src="https://llmsolutions.com.br/logo.svg" alt="LLM Solutions">
+        <span class="brand-name">LLM<span> Solutions</span></span>
+      </a>
+      <button class="nav-toggle" aria-label="Abrir menu">☰</button>
+      <ul class="nav-links">
+        <li><a href="index.html">Início</a></li>
+        <li><a href="solucoes.html">Soluções</a></li>
+        <li><a href="tecnologia.html">Tecnologia</a></li>
+        <li><a href="contato.html" class="active">Contato</a></li>
+        <li><a href="contato.html" class="nav-cta">Fale conosco</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" style="padding-bottom:24px">
+      <div class="container">
+        <span class="eyebrow">● Contato</span>
+        <h1 style="max-width:720px">Vamos colocar a <span class="grad">IA</span> a trabalhar para você.</h1>
+        <p class="lead">Conte o seu cenário em uma conversa de 15 minutos, sem compromisso.
+          Respondemos rápido.</p>
+      </div>
+    </section>
+
+    <section class="container">
+      <div class="contact-grid">
+        <!-- Contact channels -->
+        <div class="reveal">
+          <ul class="contact-list">
+            <li>
+              <div class="ic">✉️</div>
+              <div>
+                <span>E-mail</span>
+                <strong><a href="mailto:lucas@llmsolutions.com.br">lucas@llmsolutions.com.br</a></strong>
+              </div>
+            </li>
+            <li>
+              <div class="ic">💬</div>
+              <div>
+                <span>WhatsApp</span>
+                <strong><a href="https://wa.me/5545999027896" target="_blank" rel="noopener">(45) 99902-7896</a></strong>
+              </div>
+            </li>
+            <li>
+              <div class="ic">🌐</div>
+              <div>
+                <span>Site</span>
+                <strong><a href="https://llmsolutions.com.br">llmsolutions.com.br</a></strong>
+              </div>
+            </li>
+          </ul>
+          <div class="card reveal" style="margin-top:8px">
+            <h3>O que acontece depois?</h3>
+            <ul>
+              <li>Respondemos para combinar o melhor horário.</li>
+              <li>Mostramos a IA funcionando no seu cenário.</li>
+              <li>Você decide, sem pressa e sem compromisso.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Form (mailto, no backend) -->
+        <form class="card reveal" id="contactForm">
+          <div class="field">
+            <label for="cNome">Nome</label>
+            <input id="cNome" type="text" required placeholder="Seu nome">
+          </div>
+          <div class="field">
+            <label for="cOrg">Candidatura / instituição</label>
+            <input id="cOrg" type="text" placeholder="Ex.: Gabinete, partido, empresa">
+          </div>
+          <div class="field">
+            <label for="cEmail">E-mail para retorno</label>
+            <input id="cEmail" type="email" required placeholder="voce@exemplo.com">
+          </div>
+          <div class="field">
+            <label for="cMsg">Mensagem</label>
+            <textarea id="cMsg" rows="4" placeholder="Conte rapidamente o que você precisa..."></textarea>
+          </div>
+          <button class="btn btn-primary" type="submit" style="width:100%; justify-content:center">Enviar mensagem</button>
+          <p class="demo-note" style="margin-top:14px">
+            Ao enviar, abrimos o seu aplicativo de e-mail com a mensagem pronta para
+            <strong>lucas@llmsolutions.com.br</strong>.
+          </p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <a class="brand" href="index.html">
+          <img src="https://llmsolutions.com.br/logo.svg" alt="LLM Solutions">
+          <span class="brand-name">LLM<span> Solutions</span></span>
+        </a>
+        <nav class="footer-links">
+          <a href="index.html">Início</a>
+          <a href="solucoes.html">Soluções</a>
+          <a href="tecnologia.html">Tecnologia</a>
+          <a href="contato.html">Contato</a>
+          <a href="mailto:lucas@llmsolutions.com.br">lucas@llmsolutions.com.br</a>
+        </nav>
+      </div>
+      <div class="copyright">© <span id="year">2026</span> LLM Solutions · llmsolutions.com.br · Inteligência Artificial aplicada</div>
+    </div>
+  </footer>
+
+  <script src="assets/app.js"></script>
+  <script>
+    // mailto compose — keeps the site 100% static (no backend needed)
+    (function () {
+      var f = document.getElementById("contactForm");
+      if (!f) return;
+      f.addEventListener("submit", function (e) {
+        e.preventDefault();
+        var nome = document.getElementById("cNome").value.trim();
+        var org = document.getElementById("cOrg").value.trim();
+        var email = document.getElementById("cEmail").value.trim();
+        var msg = document.getElementById("cMsg").value.trim();
+        var subject = "Contato pelo site — " + (nome || "novo lead");
+        var body =
+          "Nome: " + nome + "\n" +
+          "Candidatura/instituicao: " + org + "\n" +
+          "E-mail: " + email + "\n\n" +
+          "Mensagem:\n" + msg + "\n";
+        window.location.href = "mailto:lucas@llmsolutions.com.br" +
+          "?subject=" + encodeURIComponent(subject) +
+          "&body=" + encodeURIComponent(body);
+      });
+    })();
+  </script>
+</body>
+</html>
