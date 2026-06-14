@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tecnologia & Demonstração — LLM Solutions</title>
+  <meta name="description" content="Entenda RAG e AEO de forma simples e converse com uma demonstração de chatbot com IA, rodando direto no seu navegador.">
+  <meta name="theme-color" content="#0a1628">
+  <link rel="icon" href="https://llmsolutions.com.br/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="index.html" aria-label="LLM Solutions — início">
+        <img src="https://llmsolutions.com.br/logo.svg" alt="LLM Solutions">
+        <span class="brand-name">LLM<span> Solutions</span></span>
+      </a>
+      <button class="nav-toggle" aria-label="Abrir menu">☰</button>
+      <ul class="nav-links">
+        <li><a href="index.html">Início</a></li>
+        <li><a href="solucoes.html">Soluções</a></li>
+        <li><a href="tecnologia.html" class="active">Tecnologia</a></li>
+        <li><a href="contato.html">Contato</a></li>
+        <li><a href="contato.html" class="nav-cta">Fale conosco</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" style="padding-bottom:18px">
+      <div class="container">
+        <span class="eyebrow">● Tecnologia</span>
+        <h1 style="max-width:760px">Experimente a IA <span class="grad">funcionando agora</span>.</h1>
+        <p class="lead">A demonstração abaixo roda inteiramente no seu navegador. Ela imita um chatbot
+          com RAG: responde a partir de uma base de documentos e avisa quando não encontra a resposta.</p>
+      </div>
+    </section>
+
+    <!-- LIVE DEMO -->
+    <section class="container" style="padding-top:8px">
+      <div class="demo reveal">
+        <div class="demo-top">
+          <div class="avatar">IA</div>
+          <div class="meta">
+            <strong>Assistente LLM Solutions</strong>
+            <span>Demonstração · RAG no navegador</span>
+          </div>
+          <span class="status">online</span>
+        </div>
+        <div class="demo-log" id="demoLog" aria-live="polite"></div>
+        <div class="demo-suggest">
+          <button class="chip" type="button">Quais soluções vocês oferecem?</button>
+          <button class="chip" type="button">O que é AEO?</button>
+          <button class="chip" type="button">Como funciona o chatbot?</button>
+          <button class="chip" type="button">Quanto custa?</button>
+        </div>
+        <form class="demo-input" id="demoForm" autocomplete="off">
+          <input id="demoInput" type="text" placeholder="Escreva sua pergunta..." aria-label="Sua pergunta">
+          <button class="btn btn-primary" type="submit">Enviar</button>
+        </form>
+      </div>
+      <p class="demo-note">
+        Esta é uma simulação com poucos documentos, só para mostrar o comportamento. Um chatbot real
+        é treinado em todo o material do seu gabinete e integrado ao seu site.
+      </p>
+    </section>
+
+    <!-- CONCEPTS -->
+    <section class="container">
+      <div class="section-head reveal">
+        <span class="kicker">Sem juridiquês, sem "tech-ês"</span>
+        <h2>Os dois conceitos que importam</h2>
+      </div>
+      <div class="grid cols-2">
+        <article class="card reveal">
+          <div class="icon">📚</div>
+          <h3>RAG — respostas com fonte</h3>
+          <p>RAG (Retrieval-Augmented Generation) faz a IA <strong>buscar primeiro</strong> nos seus
+             documentos e só então responder. O resultado: respostas fiéis ao que você de fato defende,
+             com muito menos risco de a IA "inventar".</p>
+          <ul>
+            <li>Responde a partir dos seus materiais</li>
+            <li>Sem correspondência, avisa em vez de chutar</li>
+            <li>Você atualiza a base quando quiser</li>
+          </ul>
+        </article>
+        <article class="card reveal">
+          <div class="icon">🧭</div>
+          <h3>AEO — ser encontrado pelas IAs</h3>
+          <p>Assim como existe SEO para o Google, o AEO prepara o seu conteúdo para os
+             <strong>mecanismos de resposta</strong> — ChatGPT, Gemini, Claude. O objetivo é simples:
+             quando perguntarem de você, a IA ter o que responder, e responder bem.</p>
+          <ul>
+            <li>Conteúdo estruturado para a IA entender</li>
+            <li>Mais chance de citação correta e favorável</li>
+            <li>Acompanhamento ao longo do tempo</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="container">
+      <div class="cta-band reveal">
+        <h2>Gostou da demonstração?</h2>
+        <p>Imagine isso treinado de verdade no material da sua candidatura ou instituição.</p>
+        <a class="btn btn-primary" href="contato.html">Quero conversar</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <a class="brand" href="index.html">
+          <img src="https://llmsolutions.com.br/logo.svg" alt="LLM Solutions">
+          <span class="brand-name">LLM<span> Solutions</span></span>
+        </a>
+        <nav class="footer-links">
+          <a href="index.html">Início</a>
+          <a href="solucoes.html">Soluções</a>
+          <a href="tecnologia.html">Tecnologia</a>
+          <a href="contato.html">Contato</a>
+          <a href="mailto:lucas@llmsolutions.com.br">lucas@llmsolutions.com.br</a>
+        </nav>
+      </div>
+      <div class="copyright">© <span id="year">2026</span> LLM Solutions · llmsolutions.com.br · Inteligência Artificial aplicada</div>
+    </div>
+  </footer>
+
+  <script src="assets/app.js"></script>
+</body>
+</html>
